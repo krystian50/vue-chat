@@ -9,7 +9,7 @@ In this exercise you will create basic chat. You will use:
 ## Boilerplate
 In this repo I created for you sample app connected with firebase. I really encourage you to generate app by yourself, but if you have any troubles, just clone the repo or copy files and:
 1. Create your own firebase instance.
-2. Go to `src/utils/db.refs.js` and change `config.databaseUrl` to our own URL.
+2. Go to `src/utils/db.refs.js` and change `config.databaseUrl` to your own URL.
 
 
 ## TODO
