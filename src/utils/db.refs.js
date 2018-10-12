@@ -10,8 +10,9 @@ const config = {
 const firebaseApp = firebase.initializeApp(config);
 const db = firebaseApp.database();
 
-export const messagesRef = db.ref('messages');
+export const yourRef = db.ref('messages');
 
 export default {
-  messagesRef,
+  // return your firebase document ref
+  yourRef,
 };

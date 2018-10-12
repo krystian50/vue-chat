@@ -1,11 +1,7 @@
 <template>
   <div id="app">
-    <ul>
-      <li v-for="message in messages" :key="message['.key']">
-        {{ message.text }}
-      </li>
-    </ul>
-    <form @submit.prevent="onAddMessage">
+    <!-- your messages in here -->
+    <form @submit.prevent="onAddMessage()">
       <input v-model="newMessage">
       <button>Add</button>
     </form>
@@ -13,34 +9,23 @@
 </template>
 
 <script>
-import { createNamespacedHelpers } from 'vuex';
-const { mapActions, mapGetters, mapMutations } = createNamespacedHelpers('messages');
-
 export default {
-  name: 'app',
-  computed: {
-    ...mapGetters(['messages', 'messagesRef']),
-  },
+  name: 'App',
   data: () => ({
-    newMessage: ''
+    newMessage: '',
   }),
+  computed: {
+    // Add your state data to computed
+  },
   methods: {
-    ...mapActions(['initMessagesRef']),
-    ...mapMutations(['addMessage']),
     onAddMessage() {
       if (this.newMessage.trim()) {
-        this.addMessage({
-          text: this.newMessage,
-          rate: 0,
-        })
-        this.newMessage = ''
+        // ADD data to firebase
+        this.newMessage = '';
       }
     },
   },
-  created() {
-    this.initMessagesRef();
-  }
-}
+};
 </script>
 
 <style lang="scss">
