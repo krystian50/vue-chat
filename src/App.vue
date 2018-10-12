@@ -3,9 +3,6 @@
     <ul>
       <li v-for="message in messages" :key="message['.key']">
         {{ message.text }}
-        <button @click="removeMessage(message['.key'])">X</button>
-        <button @click="incrementMessageRate(message['.key'])">Like it</button>
-        likes: {{ message.rate }}
       </li>
     </ul>
     <form @submit.prevent="onAddMessage">
@@ -29,7 +26,7 @@ export default {
   }),
   methods: {
     ...mapActions(['initMessagesRef']),
-    ...mapMutations(['addMessage', 'removeMessage', 'incrementMessageRate']),
+    ...mapMutations(['addMessage']),
     onAddMessage() {
       if (this.newMessage.trim()) {
         this.addMessage({
