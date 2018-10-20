@@ -1,3 +1,4 @@
+
 # Vue-chat: Extra exercise for vue-js devmeeting
 In this exercise you will create basic chat. You will use:
 - VueJS
@@ -5,6 +6,8 @@ In this exercise you will create basic chat. You will use:
 - VuexFire
 - ES6/7
 - ...and any extra library you wish to use
+
+Any suggestions and opinions are welcome. Please let me know what was the problem for you and which exercise was the tough one. If you have your repo with solution, you can send me that. I will do a code review for you. My email address: krystian@fras.me
 
 ## Boilerplate
 In this repo I created for you sample app connected with firebase. I really encourage you to generate app by yourself, but if you have any troubles, just clone the repo or copy files and:
